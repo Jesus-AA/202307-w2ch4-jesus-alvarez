@@ -30,3 +30,5 @@ describe("Given the fizzBuzzFunction", () => {
     });
   });
 });
+
+// One test Passed
