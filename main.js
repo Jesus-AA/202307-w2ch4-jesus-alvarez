@@ -1,32 +1,23 @@
-export function doFreeBuzz(numberStart, numberEnd) {
-  const result = [];
-  if (
-    numberStart >= numberEnd ||
-    numberStart < 0 ||
-    typeof numberStart === "string" ||
-    typeof numberEnd === "string"
-  )
-    return null;
-  if (numberStart === 0) return result;
-
-  for (let i = numberStart; i <= numberEnd; i++) {
+export const fizzBuzzFunction = (start, end) => {
+  const numArray = [];
+  for (let i = start; i <= end; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-      result.push("FizzBuzz");
+      numArray.push("FizzBuzz");
       continue;
     }
 
     if (i % 5 === 0) {
-      result.push("Buzz");
+      numArray.push("Buzz");
       continue;
     }
 
     if (i % 3 === 0) {
-      result.push("Fizz");
+      numArray.push("Fizz");
       continue;
     }
 
-    result.push(i);
+    numArray.push(i);
   }
 
-  return result;
-}
+  return numArray;
+};
